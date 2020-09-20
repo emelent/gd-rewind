@@ -9,8 +9,11 @@ func _ready():
 	pass
 
 func _input(event):
-	if OS.is_debug_build() and event.is_action_pressed("debug_quit") :
-		quit()
+	if OS.is_debug_build():
+		if event.is_action_pressed("debug_quit") :
+			quit()
+		if event.is_action_pressed("debug_restart") :
+			get_tree().reload_current_scene()
 
 # CUSTOM 
 func goToScene(path):
