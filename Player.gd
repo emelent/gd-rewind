@@ -12,6 +12,6 @@ func handle_movement_input():
 	elif Input.is_action_pressed("move_right"):
 		direction = 1
 		state_machine.set_current_state(Global.player_states.walk)
-	elif state_machine._current_state.state_name != Global.player_states.idle:
+	else:
 		state_machine.set_current_state(Global.player_states.idle)
 	motion.x = direction * speed

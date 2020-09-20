@@ -28,6 +28,8 @@ func add_state(state_name):
 
 
 func set_current_state(state_name):
+	if _current_state and _current_state.state_name == state_name: return
+	
 	var new_state = states[state_name]
 	if !new_state: return
 	
