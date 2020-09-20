@@ -14,7 +14,9 @@ the rewind effect are `rewind_system.gd` and `rewinder.gd`.
 ### Controls
 
 movement - `WASD`
+
 rewind - `Shift`
+
 
 
 ### How it works
