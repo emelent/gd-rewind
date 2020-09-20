@@ -8,6 +8,14 @@ func _process(delta):
 		parent.mode = initial_mode
 
 func __record():
+	if !rewind_data.empty():
+		var prev = rewind_data[0]
+		var pos = parent.global_position as Vector2
+		if pos.distance_to(prev.pos) > 100:
+			# I cannot figure out what causes the code to get here,
+			# This is section is just to see part of the bug. This happens
+			# when rewinding the falling of the stack of boxes
+			print("problemo")
 	return {
 		pos = parent.global_position,
 		lin_vel = parent.linear_velocity,

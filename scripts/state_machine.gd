@@ -36,7 +36,7 @@ func set_current_state(state_name):
 	_previous_state = _current_state
 	_current_state = new_state
 	emit_signal("state_changed", new_state.state_name)
-	print("current state => " + _current_state.state_name)
+#	print("current state => " + _current_state.state_name)
 
 	if _previous_state != null:
 		_previous_state.__exit(_current_state)

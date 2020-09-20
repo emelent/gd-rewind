@@ -8,3 +8,7 @@ const player_states = {
 	jump = "jump",
 	idle = "idle"
 }
+
+const group = {
+	bodies = "bodies"
+}
