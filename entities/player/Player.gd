@@ -13,16 +13,19 @@ func _process(delta):
 	if Input.is_action_pressed("rewind"):
 		RewindManager.rewinding = true
 		if !rewind_data.empty():
-			global_position = rewind_data.pop_front()
-			if rewind_data.empty():
-				print("final pop => ", global_position)
+			var data = rewind_data.pop_front()
+			global_position = data.pos
+			motion = data.vel 
 	else:
 		if rewind_frame < 1:
 			rewind_frame += 1/rewind_speed
 		else:
 			rewind_frame = 0
 			RewindManager.rewinding = false
-			rewind_data.push_front(global_position)
+			rewind_data.push_front({
+				pos = global_position,
+				vel = motion
+			})
 			if rewind_data.size() > max_entries:
 				rewind_data.pop_back()
 	set_physics_process(!RewindManager.rewinding)
