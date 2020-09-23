@@ -16,7 +16,7 @@ func _ready():
 
 	var init_state = get_node(initial_state) as State
 	if init_state:
-		set_current_state(init_state.state_name)
+		call_deferred("set_current_state", init_state.state_name)
 
 func load_state(state: State):
 	if state == null: return

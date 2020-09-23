@@ -12,3 +12,6 @@ func _input(event):
 func _process(delta):
 	(character as Player).handle_movement_input()
 	
+
+func __enter(previous_state):
+	(character as Player).animated_sprite.play(state_name)

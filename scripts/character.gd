@@ -3,7 +3,7 @@ class_name Character
 
 export(float) var speed = 300
 export(Vector2) var gravity = Global.gravity
-export(int, 0, 200) var inertia = 50
+export(int, 0, 200) var inertia = 25
 
 var motion = Vector2.ZERO
 var direction = 0

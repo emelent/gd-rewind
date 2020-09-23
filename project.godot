@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Character",
 "class": "Player",
 "language": "GDScript",
-"path": "res://entities/player/Player.gd"
+"path": "res://entities/player/player.gd"
 }, {
 "base": "Node",
 "class": "Rewinder",

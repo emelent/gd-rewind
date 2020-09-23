@@ -1,12 +1,13 @@
 extends Node2D
 
 
-const gravity = Vector2(0, 900)
+const gravity = Vector2(0, 1400)
 
 const player_states = {
 	walk = "walk",
 	jump = "jump",
-	idle = "idle"
+	idle = "idle",
+	fall = "fall"
 }
 
 const group = {

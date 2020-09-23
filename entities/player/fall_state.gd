@@ -1,7 +1,7 @@
 extends State
 
 func _ready():
-	state_name = Global.player_states.jump
+	state_name = Global.player_states.fall
 	._ready()
 
 func _process(delta):
@@ -13,11 +13,10 @@ func _physics_process(delta):
 
 
 func __enter(previous_state):
-	character.motion.y = -character.jump_force
 	(character as Player).animated_sprite.play(state_name)
-
 	
 func __exit(next_state):
 	pass
 	
 	
+

@@ -11,4 +11,12 @@ func _input(event):
 	
 func _process(delta):
 	(character as Player).handle_movement_input()
+
+func __enter(previous_state):
+	# if previous_state == null:
+	# 	return
+
+	# match previous_state.state_name:
+		# Global.player_states.idle:
+	(character as Player).animated_sprite.play(state_name)
 	
