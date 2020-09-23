@@ -34,7 +34,3 @@ The rewind effect is created by adding a plain `Node` as a child of the `Node2D`
 You can however, extend the `rewinder.gd` script and override the `__record()` and `__rewind(data)` methods, to specify the data you want to record.
 An example of this is in `player_rewinder.gd`.
 
-
-### Issues
-
-There's a bug when rewinding the falling stack which I can't figure out right now. Don't know why it happens, but the stack doesn't return back to normal once you stop rewinding, but the blocks just move back to the position you rewinded them out of... weird.
