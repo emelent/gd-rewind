@@ -20,6 +20,7 @@ extents = Vector2( 599.948, 10 )
 [node name="Main" type="Node2D"]
 
 [node name="DebugData" type="Control" parent="."]
+visible = false
 margin_left = 0.51886
 margin_right = 1024.52
 margin_bottom = 600.0
